@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/firebase-mvc-auth-app/.vs/firebase-mvc-auth-app
+/firebase-mvc-auth-app/firebase-mvc-auth/bin/Debug/net5.0
+/firebase-mvc-auth-app/firebase-mvc-auth/obj
+/firebase-mvc-auth-app/firebase-mvc-auth/Properties/launchSettings.json
+/firebase-mvc-auth-app/firebase-mvc-auth/wwwroot/lib
+/firebase-mvc-auth-app/firebase-mvc-auth/firebase-mvc-auth.csproj.user

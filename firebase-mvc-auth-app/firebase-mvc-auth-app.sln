@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "firebase-mvc-auth", "firebase-mvc-auth\firebase-mvc-auth.csproj", "{1FB06AD2-6482-4C5E-8866-150DB5D8E3C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FB06AD2-6482-4C5E-8866-150DB5D8E3C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB06AD2-6482-4C5E-8866-150DB5D8E3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB06AD2-6482-4C5E-8866-150DB5D8E3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB06AD2-6482-4C5E-8866-150DB5D8E3C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B976D7C7-1272-46AA-A3A1-B177465847E2}
+	EndGlobalSection
+EndGlobal
