@@ -3,6 +3,16 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>firebase_mvc_auth</RootNamespace>
+    <UserSecretsId>76d5f33e-2e1c-4f4c-ad2f-4ba810595f29</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Authentication\FirebaseSetup\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseAdmin" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.11" />
+  </ItemGroup>
 
 </Project>
