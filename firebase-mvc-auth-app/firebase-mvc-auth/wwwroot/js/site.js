@@ -30,21 +30,6 @@ function privacy() {
                 .then((token) => {
 
                     idToken = token;
-
-                    //fetch('https://localhost:5001/Home/Privacy', {
-                    //    method: 'get',
-                    //    mode: 'cors',
-                    //    cache: 'no-cache',
-                    //    headers: {
-                    //        'authorization': 'bearer ' + idToken
-                    //    }
-                    //})
-                    //    .then((response) => response.body)
-                    //    .then(body => {
-                    //        console.log(body);
-                    //        //document.getElementsByClassName("text-center")[0].innerHTML = data.body;
-                    //    });
-
                     $.ajax({
                         type: "GET",
                         url: url,
