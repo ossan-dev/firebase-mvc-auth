@@ -33,7 +33,7 @@ namespace firebase_mvc_auth
 
             FirebaseApp.Create(new AppOptions()
             {
-                Credential = GoogleCredential.FromFile(@"C:\Projects\SampleProjects\firebase-mvc-auth\firebase-mvc-auth\firebase-mvc-auth-app\firebase-mvc-auth\Authentication\FirebaseSetup\fir-demo-9063a-firebase-adminsdk-wwos4-d062af9c1a.json")
+                Credential = GoogleCredential.FromFile(@"C:\Projects\SampleProjects\firebase-mvc-auth\firebase-mvc-auth\firebase-mvc-auth-app\firebase-mvc-auth\Authentication\FirebaseSetup\fir-demo-9063a-firebase-adminsdk-wwos4-f0b1ddaaf8.json")
             });
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
