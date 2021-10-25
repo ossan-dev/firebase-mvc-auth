@@ -25,6 +25,7 @@ namespace firebase_mvc_auth.Controllers
         }
 
         [Authorize]
+        [HttpGet]
         public IActionResult Privacy()
         {
             return View();

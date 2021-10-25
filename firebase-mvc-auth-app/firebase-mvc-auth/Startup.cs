@@ -1,5 +1,6 @@
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,7 +37,7 @@ namespace firebase_mvc_auth
                 Credential = GoogleCredential.FromFile(@"C:\Projects\SampleProjects\firebase-mvc-auth\firebase-mvc-auth\firebase-mvc-auth-app\firebase-mvc-auth\Authentication\FirebaseSetup\fir-demo-9063a-firebase-adminsdk-wwos4-f0b1ddaaf8.json")
             });
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                  .AddJwtBearer(options =>
                  {
                      options.Authority = Configuration["Firebase:Authority"];

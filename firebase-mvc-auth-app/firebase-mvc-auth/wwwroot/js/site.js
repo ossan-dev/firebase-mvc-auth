@@ -1,5 +1,12 @@
-﻿window.onload = () => {
+﻿var jwt = '';
 
+window.addEventListener("load", myInit, false);
+
+function myInit() {
+    initializeFirebase();
+}
+
+function initializeFirebase() {
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
         apiKey: "AIzaSyB3SyjJxBmKXAbJdRYJJlJHh9RLl2uELXc",
@@ -12,4 +19,50 @@
     };
 
     firebase.initializeApp(firebaseConfig);
-};
+}
+
+function privacy() {
+    var url = "https://localhost:5001/Home/Privacy"
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            var idToken = '';
+            user.getIdToken(true)
+                .then((token) => {
+
+                    idToken = token;
+
+                    //fetch('https://localhost:5001/Home/Privacy', {
+                    //    method: 'get',
+                    //    mode: 'cors',
+                    //    cache: 'no-cache',
+                    //    headers: {
+                    //        'authorization': 'bearer ' + idToken
+                    //    }
+                    //})
+                    //    .then((response) => response.body)
+                    //    .then(body => {
+                    //        console.log(body);
+                    //        //document.getElementsByClassName("text-center")[0].innerHTML = data.body;
+                    //    });
+
+                    $.ajax({
+                        type: "GET",
+                        url: url,
+                        dataType: "html",
+                        headers: {
+                            "Authorization": "Bearer " + idToken
+                        },
+                        success: function (data) {
+                            document.body.innerHTML = data;
+                            //window.location = url;
+                        }
+                    });
+                })
+        } else {
+            windows.location = 'https://localhost:5001/login';
+        }
+    });
+
+
+}
+

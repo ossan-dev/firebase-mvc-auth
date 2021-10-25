@@ -7,7 +7,8 @@
         .then(({ user }) => {
             user.getIdToken()
                 .then((idToken) => {
-                    console.log(idToken);
+                    jwt = idToken;
+                    window.location = '/';
                 })
         })
         .catch((error) => {
