@@ -37,7 +37,7 @@ namespace firebase_mvc_auth
                 Credential = GoogleCredential.FromFile(@"C:\Projects\SampleProjects\firebase-mvc-auth\firebase-mvc-auth\firebase-mvc-auth-app\firebase-mvc-auth\Authentication\FirebaseSetup\fir-demo-9063a-firebase-adminsdk-wwos4-f0b1ddaaf8.json")
             });
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                  .AddJwtBearer(options =>
                  {
                      options.Authority = Configuration["Firebase:Authority"];
@@ -85,6 +85,15 @@ namespace firebase_mvc_auth
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            // https://stackoverflow.com/a/60266677/14394371
+            app.Use(async (context, next) =>
+            {
+                var token = context.Request.Cookies["access_token"];
+                if (!string.IsNullOrEmpty(token))
+                    context.Request.Headers.Add("Authorization", "Bearer " + token);
+                await next();                
+            });
 
             app.UseAuthentication();
 
