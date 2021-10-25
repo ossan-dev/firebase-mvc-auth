@@ -7,7 +7,7 @@
         .then(({ user }) => {
             user.getIdToken()
                 .then((idToken) => {
-                    jwt = idToken;
+                    document.cookie = `access_token=${idToken}; domain=localhost; secure; max-age=1800; SameSite=strict`
                     window.location = '/';
                 })
         })
